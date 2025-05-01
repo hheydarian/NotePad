@@ -86,5 +86,47 @@ namespace NotePad
         {
             Textpad_txt.Clear();
         }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog font = new FontDialog();
+            if (font.ShowDialog() == DialogResult.OK)
+            {
+                Textpad_txt.Font = font.Font;
+            }
+        }
+
+        private void backColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog color = new ColorDialog();
+            if (color.ShowDialog() == DialogResult.OK)
+            {
+                Textpad_txt.BackColor = color.Color;
+            }
+        }
+
+        private void foreColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog color = new ColorDialog();
+            if (color.ShowDialog() == DialogResult.OK)
+            {
+                Textpad_txt.ForeColor = color.Color;
+            }
+        }
+
+        private void selectColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog color = new ColorDialog();
+            if (color.ShowDialog() == DialogResult.OK)
+            {
+                Textpad_txt.SelectionColor = color.Color;
+            }
+        }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutUs about = new AboutUs();
+            about.ShowDialog();
+        }
     }
 }
